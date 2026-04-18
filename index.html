@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beneficiary Journey — Flowchart Diagram</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;background:#FFFFFF;color:#0F172A;padding:20px}
+
+.header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:2px solid #E2E8F0}
+.header h1{font-size:26px;color:#0F172A;margin-bottom:6px}
+.header p{font-size:13px;color:#64748B}
+
+.flowchart-container{max-width:100%;overflow-x:auto;padding:20px 0}
+.flowchart-svg{display:block;margin:0 auto}
+
+.legend{display:flex;justify-content:center;gap:30px;margin-top:30px;padding:20px;background:#F8FAFC;border-radius:12px;flex-wrap:wrap;font-size:12px;border:1px solid #E2E8F0}
+.legend-item{display:flex;align-items:center;gap:10px}
+.legend-box{width:50px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>رحلة المستفيد — Beneficiary Journey Flowchart</h1>
+  <p>مشروع عابر — 5 مراحل × 21 نظام • من جاكرتا إلى الحرم المكي</p>
+</div>
+
+<div class="flowchart-container">
+<svg class="flowchart-svg" width="1400" height="3600" viewBox="0 0 1400 3600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#DC2626"/>
+    </marker>
+  </defs>
+
+  <!-- START NODE -->
+  <rect x="600" y="20" width="200" height="60" rx="30" fill="#D1FAE5" stroke="#059669" stroke-width="2"/>
+  <text x="700" y="48" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">START</text>
+  <text x="700" y="66" text-anchor="middle" font-size="11" fill="#065F46">أحمد في جاكرتا — يريد الحج</text>
+  <line x1="700" y1="80" x2="700" y2="115" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 1 HEADER -->
+  <rect x="100" y="115" width="1200" height="35" fill="#7C3AED"/>
+  <text x="700" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">المرحلة 1 — إصدار التصريح (Pre-arrival • 24h before)</text>
+
+  <rect x="550" y="170" width="300" height="55" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="192" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">يفتح تطبيق نسك</text>
+  <text x="700" y="210" text-anchor="middle" font-size="11" fill="#334155">إدخال: جواز سفر + تأشيرة + صحة</text>
+  <line x1="700" y1="225" x2="700" y2="255" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="260" width="300" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="282" text-anchor="middle" font-size="12" font-weight="600" fill="#6B21A8">AI Decision Engine</text>
+  <text x="700" y="300" text-anchor="middle" font-size="10" fill="#475569">تصنيف تلقائي • &lt; 1 ثانية • دقة 96%</text>
+  
+  <line x1="700" y1="315" x2="700" y2="340" stroke="#475569" stroke-width="2"/>
+  <line x1="300" y1="340" x2="1100" y2="340" stroke="#475569" stroke-width="2"/>
+  <line x1="300" y1="340" x2="300" y2="365" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="340" x2="700" y2="365" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1100" y1="340" x2="1100" y2="365" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="170" y="370" width="260" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="300" y="392" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">RAG Eligibility</text>
+  <text x="300" y="410" text-anchor="middle" font-size="10" fill="#475569">وزارة الصحة + الأمن</text>
+
+  <rect x="570" y="370" width="260" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="392" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">Digital Twin</text>
+  <text x="700" y="410" text-anchor="middle" font-size="10" fill="#475569">سعة البوابة يوم الوصول</text>
+
+  <rect x="970" y="370" width="260" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="1100" y="392" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">Congestion Pricing</text>
+  <text x="1100" y="410" text-anchor="middle" font-size="10" fill="#475569">تخفيف الذروة -40%</text>
+
+  <line x1="300" y1="425" x2="300" y2="455" stroke="#475569" stroke-width="2"/>
+  <line x1="700" y1="425" x2="700" y2="455" stroke="#475569" stroke-width="2"/>
+  <line x1="1100" y1="425" x2="1100" y2="455" stroke="#475569" stroke-width="2"/>
+  <line x1="300" y1="455" x2="1100" y2="455" stroke="#475569" stroke-width="2"/>
+  <line x1="700" y1="455" x2="700" y2="475" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Decision diamond -->
+  <polygon points="700,480 820,550 700,620 580,550" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="700" y="545" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">الأهلية</text>
+  <text x="700" y="562" text-anchor="middle" font-size="11" fill="#78350F">مقبولة؟</text>
+
+  <line x1="580" y1="550" x2="430" y2="550" stroke="#DC2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="505" y="540" text-anchor="middle" font-size="11" font-weight="700" fill="#DC2626">لا</text>
+  <rect x="270" y="520" width="160" height="60" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+  <text x="350" y="545" text-anchor="middle" font-size="11" font-weight="600" fill="#991B1B">رفض + إشعار</text>
+  <text x="350" y="563" text-anchor="middle" font-size="10" fill="#7F1D1D">السبب + خطوات بديلة</text>
+
+  <line x1="700" y1="620" x2="700" y2="655" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="720" y="640" font-size="11" font-weight="700" fill="#059669">نعم</text>
+
+  <!-- Data parallelogram -->
+  <path d="M 550 660 L 840 660 L 820 700 L 530 700 Z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+  <text x="685" y="678" text-anchor="middle" font-size="12" font-weight="600" fill="#991B1B">إصدار QR + Route + RFID Tag</text>
+  <text x="685" y="694" text-anchor="middle" font-size="10" fill="#7F1D1D">إشعار لأحمد بالإندونيسية</text>
+
+  <line x1="700" y1="700" x2="700" y2="735" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <rect x="520" y="735" width="360" height="30" rx="15" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="700" y="755" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">⏱ بعد 24 ساعة — أحمد يصل جدة ويركب الحافلة</text>
+  <line x1="700" y1="765" x2="700" y2="795" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 2 HEADER -->
+  <rect x="100" y="795" width="1200" height="35" fill="#2563EB"/>
+  <text x="700" y="818" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">المرحلة 2 — الفلترة الأولية (Arrival • 500m before gate • &lt; 1 sec)</text>
+
+  <rect x="550" y="850" width="300" height="55" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="872" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">الحافلة تقترب من بوابة 3 — الشرق</text>
+  <text x="700" y="890" text-anchor="middle" font-size="10" fill="#334155">مسافة 500م • سرعة حتى 250 km/h</text>
+  <line x1="700" y1="905" x2="700" y2="935" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="700" y1="940" x2="700" y2="960" stroke="#475569" stroke-width="2"/>
+  <line x1="450" y1="960" x2="950" y2="960" stroke="#475569" stroke-width="2"/>
+  <line x1="450" y1="960" x2="450" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="960" x2="950" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="990" width="260" height="60" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="450" y="1012" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">ANPR Camera (5MP + DLPU)</text>
+  <text x="450" y="1030" text-anchor="middle" font-size="10" fill="#475569">قراءة اللوحة • &lt;1s • دقة 98%</text>
+
+  <rect x="820" y="990" width="260" height="60" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="950" y="1012" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">RFID Reader</text>
+  <text x="950" y="1030" text-anchor="middle" font-size="10" fill="#475569">قراءة Tag • 100% مطابقة</text>
+
+  <line x1="450" y1="1050" x2="450" y2="1080" stroke="#475569" stroke-width="2"/>
+  <line x1="950" y1="1050" x2="950" y2="1080" stroke="#475569" stroke-width="2"/>
+  <line x1="450" y1="1080" x2="950" y2="1080" stroke="#475569" stroke-width="2"/>
+  <line x1="700" y1="1080" x2="700" y2="1100" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="1105" width="300" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="1127" text-anchor="middle" font-size="12" font-weight="600" fill="#6B21A8">ANPR + RFID Fusion</text>
+  <text x="700" y="1145" text-anchor="middle" font-size="10" fill="#475569">تحقق مزدوج • دقة 99.5%+</text>
+
+  <line x1="700" y1="1160" x2="700" y2="1185" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <polygon points="700,1190 820,1260 700,1330 580,1260" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="700" y="1255" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">تطابق مزدوج</text>
+  <text x="700" y="1272" text-anchor="middle" font-size="11" fill="#78350F">سليم؟</text>
+
+  <line x1="580" y1="1260" x2="430" y2="1260" stroke="#DC2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="505" y="1250" text-anchor="middle" font-size="11" font-weight="700" fill="#DC2626">لا</text>
+  <rect x="250" y="1230" width="180" height="60" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+  <text x="340" y="1255" text-anchor="middle" font-size="11" font-weight="600" fill="#991B1B">إغلاق الذراع + L2</text>
+  <text x="340" y="1273" text-anchor="middle" font-size="10" fill="#7F1D1D">فحص يدوي</text>
+
+  <line x1="700" y1="1330" x2="700" y2="1360" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="775" y="1348" font-size="11" font-weight="700" fill="#059669">نعم (80% auto-pass)</text>
+
+  <rect x="550" y="1365" width="300" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="1387" text-anchor="middle" font-size="12" font-weight="600" fill="#6B21A8">Smart Traffic</text>
+  <text x="700" y="1405" text-anchor="middle" font-size="10" fill="#475569">الذراع يفتح قبل الوصول — بدون توقف</text>
+
+  <line x1="700" y1="1420" x2="700" y2="1450" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="1450" width="360" height="30" rx="15" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="700" y="1470" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">⏱ الحافلة تتابع — 500 متر لنقطة الفرز الثانية</text>
+  <line x1="700" y1="1480" x2="700" y2="1510" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 3 HEADER -->
+  <rect x="100" y="1510" width="1200" height="35" fill="#059669"/>
+  <text x="700" y="1533" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">المرحلة 3 — نقاط الفرز (Processing Points • 8 sec per pilgrim)</text>
+
+  <rect x="550" y="1565" width="300" height="50" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="1586" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">الحافلة تدخل منطقة الفرز الثانية</text>
+  <text x="700" y="1603" text-anchor="middle" font-size="10" fill="#334155">قدرة: 5000 مركبة/ساعة</text>
+  <line x1="700" y1="1615" x2="700" y2="1645" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="1650" width="300" height="50" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="1670" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">أحمد ينزل مع مجموعته</text>
+  <text x="700" y="1687" text-anchor="middle" font-size="10" fill="#334155">فحص بيومتري</text>
+  <line x1="700" y1="1700" x2="700" y2="1725" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="700" y1="1725" x2="700" y2="1745" stroke="#475569" stroke-width="2"/>
+  <line x1="450" y1="1745" x2="950" y2="1745" stroke="#475569" stroke-width="2"/>
+  <line x1="450" y1="1745" x2="450" y2="1770" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="1745" x2="950" y2="1770" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="1775" width="260" height="60" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="450" y="1797" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">Face Recognition + بصمة</text>
+  <text x="450" y="1815" text-anchor="middle" font-size="10" fill="#475569">تأكيد الهوية • دقة 99.3%</text>
+
+  <rect x="820" y="1775" width="260" height="60" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="950" y="1797" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">VCA Deep Learning</text>
+  <text x="950" y="1815" text-anchor="middle" font-size="10" fill="#475569">كشف السلوك • دقة 95%</text>
+
+  <line x1="450" y1="1835" x2="450" y2="1865" stroke="#475569" stroke-width="2"/>
+  <line x1="950" y1="1835" x2="950" y2="1865" stroke="#475569" stroke-width="2"/>
+  <line x1="450" y1="1865" x2="950" y2="1865" stroke="#475569" stroke-width="2"/>
+  <line x1="700" y1="1865" x2="700" y2="1890" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <polygon points="700,1895 820,1965 700,2035 580,1965" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="700" y="1960" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">كشف</text>
+  <text x="700" y="1977" text-anchor="middle" font-size="11" fill="#78350F">شذوذ؟</text>
+
+  <line x1="580" y1="1965" x2="430" y2="1965" stroke="#DC2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="505" y="1955" text-anchor="middle" font-size="11" font-weight="700" fill="#DC2626">نعم</text>
+  <rect x="250" y="1935" width="180" height="60" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+  <text x="340" y="1960" text-anchor="middle" font-size="11" font-weight="600" fill="#991B1B">إنذار L1 فوري</text>
+  <text x="340" y="1978" text-anchor="middle" font-size="10" fill="#7F1D1D">إرسال أمن + إيقاف</text>
+
+  <line x1="700" y1="2035" x2="700" y2="2065" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="720" y="2053" font-size="11" font-weight="700" fill="#059669">لا</text>
+
+  <rect x="550" y="2070" width="300" height="50" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="2090" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">AI Decision — موافقة المرور</text>
+  <text x="700" y="2107" text-anchor="middle" font-size="10" fill="#334155">أحمد يعود للحافلة</text>
+
+  <line x1="700" y1="2120" x2="700" y2="2150" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="2150" width="360" height="30" rx="15" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="700" y="2170" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">⏱ الحافلة تنطلق نحو منطقة المواقف</text>
+  <line x1="700" y1="2180" x2="700" y2="2210" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 4 HEADER -->
+  <rect x="100" y="2210" width="1200" height="35" fill="#D97706"/>
+  <text x="700" y="2233" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">المرحلة 4 — المواقف والحجز (Smart Parking • 3 min • 200K capacity)</text>
+
+  <rect x="550" y="2265" width="300" height="50" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="2285" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">الحافلة تدخل منطقة المواقف</text>
+  <text x="700" y="2302" text-anchor="middle" font-size="10" fill="#334155">IoT Sensors على كل مساحة</text>
+  <line x1="700" y1="2315" x2="700" y2="2345" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="2350" width="300" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="2372" text-anchor="middle" font-size="12" font-weight="600" fill="#6B21A8">Smart Parking AI Engine</text>
+  <text x="700" y="2390" text-anchor="middle" font-size="10" fill="#475569">حساب: أقرب + أقل ازدحام • دقة 90%</text>
+
+  <line x1="700" y1="2405" x2="700" y2="2430" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <polygon points="700,2435 820,2505 700,2575 580,2505" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="700" y="2500" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">موقف</text>
+  <text x="700" y="2517" text-anchor="middle" font-size="11" fill="#78350F">متوفر؟</text>
+
+  <line x1="820" y1="2505" x2="970" y2="2505" stroke="#D97706" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="895" y="2495" text-anchor="middle" font-size="11" font-weight="700" fill="#D97706">لا</text>
+  <rect x="975" y="2475" width="200" height="60" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="1075" y="2500" text-anchor="middle" font-size="11" font-weight="600" fill="#92400E">مواقف بديلة + نقل</text>
+  <text x="1075" y="2518" text-anchor="middle" font-size="10" fill="#78350F">Congestion Pricing</text>
+
+  <line x1="700" y1="2575" x2="700" y2="2605" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="720" y="2593" font-size="11" font-weight="700" fill="#059669">نعم</text>
+
+  <path d="M 520 2610 L 870 2610 L 850 2650 L 500 2650 Z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+  <text x="685" y="2628" text-anchor="middle" font-size="12" font-weight="600" fill="#991B1B">إشعار لأحمد: موقف B-24 — 200م من باب الملك فهد</text>
+  <text x="685" y="2644" text-anchor="middle" font-size="10" fill="#7F1D1D">خريطة المشي الآمن</text>
+
+  <line x1="700" y1="2650" x2="700" y2="2680" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="550" y="2680" width="300" height="50" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="2700" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">أحمد يركن + ينزل الأمتعة</text>
+  <text x="700" y="2717" text-anchor="middle" font-size="10" fill="#334155">يبدأ المشي على المسار الأمثل</text>
+
+  <line x1="700" y1="2730" x2="700" y2="2760" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="2760" width="360" height="30" rx="15" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="700" y="2780" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">🚶 أحمد يمشي 200م — يصل البوابة الأخيرة</text>
+  <line x1="700" y1="2790" x2="700" y2="2820" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STAGE 5 HEADER -->
+  <rect x="100" y="2820" width="1200" height="35" fill="#DC2626"/>
+  <text x="700" y="2843" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">المرحلة 5 — نقاط المنع (Prevention Points • 3 sec auto-pass • Max security)</text>
+
+  <rect x="550" y="2875" width="300" height="50" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="700" y="2895" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">يصل البوابة الأخيرة قبل الحرم</text>
+  <text x="700" y="2912" text-anchor="middle" font-size="10" fill="#334155">أقصى مستوى أمان</text>
+  <line x1="700" y1="2925" x2="700" y2="2955" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <polygon points="700,2960 820,3030 700,3100 580,3030" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="700" y="3020" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">E-Screening</text>
+  <text x="700" y="3037" text-anchor="middle" font-size="11" fill="#78350F">تحقق سابقاً؟</text>
+
+  <line x1="820" y1="3030" x2="950" y2="3030" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="885" y="3020" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">نعم (80%)</text>
+  <rect x="955" y="3000" width="200" height="60" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="2"/>
+  <text x="1055" y="3025" text-anchor="middle" font-size="11" font-weight="600" fill="#047857">Auto-pass</text>
+  <text x="1055" y="3043" text-anchor="middle" font-size="10" fill="#065F46">مرور فوري بدون توقف</text>
+
+  <line x1="700" y1="3100" x2="700" y2="3125" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="720" y="3115" font-size="11" font-weight="700" fill="#D97706">لا (20%)</text>
+
+  <line x1="700" y1="3125" x2="700" y2="3145" stroke="#475569" stroke-width="2"/>
+  <line x1="400" y1="3145" x2="1000" y2="3145" stroke="#475569" stroke-width="2"/>
+  <line x1="400" y1="3145" x2="400" y2="3170" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="3145" x2="700" y2="3170" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1000" y1="3145" x2="1000" y2="3170" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="270" y="3175" width="260" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="400" y="3197" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">ANPR + RFID Fusion</text>
+  <text x="400" y="3215" text-anchor="middle" font-size="10" fill="#475569">تأكيد الهوية مزدوج</text>
+
+  <rect x="570" y="3175" width="260" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="3197" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">VIM Sensors</text>
+  <text x="700" y="3215" text-anchor="middle" font-size="10" fill="#475569">فحص الوزن • مواد خطرة</text>
+
+  <rect x="870" y="3175" width="260" height="55" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="1000" y="3197" text-anchor="middle" font-size="11" font-weight="600" fill="#6B21A8">Geo-fencing</text>
+  <text x="1000" y="3215" text-anchor="middle" font-size="10" fill="#475569">تسجيل دخول المنطقة</text>
+
+  <line x1="400" y1="3230" x2="400" y2="3260" stroke="#475569" stroke-width="2"/>
+  <line x1="700" y1="3230" x2="700" y2="3260" stroke="#475569" stroke-width="2"/>
+  <line x1="1000" y1="3230" x2="1000" y2="3260" stroke="#475569" stroke-width="2"/>
+  <line x1="400" y1="3260" x2="1000" y2="3260" stroke="#475569" stroke-width="2"/>
+  <line x1="1055" y1="3060" x2="1055" y2="3260" stroke="#059669" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="700" y1="3260" x2="700" y2="3285" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="3290" width="300" height="50" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="700" y="3310" text-anchor="middle" font-size="12" font-weight="600" fill="#6B21A8">Smart Traffic — فتح البوابة</text>
+  <text x="700" y="3327" text-anchor="middle" font-size="10" fill="#475569">في 2 ثانية</text>
+  <line x1="700" y1="3340" x2="700" y2="3370" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- END NODE -->
+  <rect x="550" y="3375" width="300" height="70" rx="35" fill="#D1FAE5" stroke="#059669" stroke-width="3"/>
+  <text x="700" y="3400" text-anchor="middle" font-size="16" font-weight="700" fill="#047857">🕋 END — الحرم المكي</text>
+  <text x="700" y="3420" text-anchor="middle" font-size="12" fill="#065F46">أحمد يدخل بسلام — الرحلة مكتملة</text>
+  <text x="700" y="3437" text-anchor="middle" font-size="10" font-style="italic" fill="#065F46">"الحمد لله — الآن أركّز على عبادتي"</text>
+
+</svg>
+</div>
+
+<div class="legend">
+  <div class="legend-item">
+    <svg width="60" height="30">
+      <rect x="5" y="3" width="50" height="24" rx="12" fill="#D1FAE5" stroke="#059669" stroke-width="2"/>
+      <text x="30" y="19" text-anchor="middle" font-size="10" font-weight="600" fill="#047857">START</text>
+    </svg>
+    <span>بداية/نهاية (Start/End)</span>
+  </div>
+  <div class="legend-item">
+    <svg width="60" height="30">
+      <rect x="5" y="3" width="50" height="24" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+      <text x="30" y="19" text-anchor="middle" font-size="9" font-weight="600" fill="#1E40AF">خطوة</text>
+    </svg>
+    <span>خطوة/إجراء (Process)</span>
+  </div>
+  <div class="legend-item">
+    <svg width="60" height="30">
+      <rect x="5" y="3" width="50" height="24" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2"/>
+      <text x="30" y="19" text-anchor="middle" font-size="9" font-weight="600" fill="#6B21A8">نظام</text>
+    </svg>
+    <span>نظام AI/RAG (System)</span>
+  </div>
+  <div class="legend-item">
+    <svg width="60" height="30">
+      <polygon points="30,3 55,15 30,27 5,15" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+      <text x="30" y="19" text-anchor="middle" font-size="9" font-weight="600" fill="#92400E">قرار</text>
+    </svg>
+    <span>قرار (Decision)</span>
+  </div>
+  <div class="legend-item">
+    <svg width="60" height="30">
+      <path d="M 10 3 L 55 3 L 50 27 L 5 27 Z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+      <text x="30" y="19" text-anchor="middle" font-size="9" font-weight="600" fill="#991B1B">بيانات</text>
+    </svg>
+    <span>بيانات/إشعار (Data I/O)</span>
+  </div>
+</div>
+
+</body>
+</html>
